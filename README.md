@@ -12,7 +12,7 @@
       <td>pantallaJframeswing</td>
       <td>Documento de la actividad y evidencia de la interfaz Swing.</td>
       <td>
-        <a href="docs/pantallaJframeswing.pdf" target="_blank">Ver PDF</a>
+        <a href="https://github.com/KevinCuevas06/EJERCICIOS-GUIADOS-UNIDAD-III/blob/main/Ejercicio%20Guiado%201%20SWING.pdf" target="_blank">Ver PDF</a>
       </td>
     </tr>
   </tbody>

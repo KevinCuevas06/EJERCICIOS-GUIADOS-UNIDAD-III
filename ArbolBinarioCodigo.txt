@@ -1,0 +1,123 @@
+/**
+ *
+ * @author 1224100512kecc@gmail.com
+ * Kevin Eduardo Cuevas Castillo
+ * GTID141
+ * 1224100512
+ * Estructura de datos
+ * Unidad 3 Ejercicio Guiado
+ */
+public class ArbolBinario {
+   
+    private NodoArbol raiz;
+
+ 
+    public ArbolBinario() {
+        this.raiz = null;
+    }
+//inserta en el arbol desde la raiz
+    
+    public void insertar(int valor) {
+        this.raiz = insertarRecursivo(this.raiz, valor);
+    }
+
+ 
+    private NodoArbol insertarRecursivo(NodoArbol actual, int valor) {
+        if (actual == null) {
+            return new NodoArbol(valor);
+        }
+
+        if (valor < actual.getDato()) {
+            actual.hijoIzquierdo = insertarRecursivo(actual.hijoIzquierdo, valor);
+        } else if (valor > actual.getDato()) {
+            actual.hijoDerecho = insertarRecursivo(actual.hijoDerecho, valor);
+        }
+
+        return actual; 
+    }
+
+    
+   // Dentro de ArbolBinario
+public void recorrerInorden() {
+    System.out.print("Recorrido Inorden: ");
+    recorrerInordenRecursivo(this.raiz);
+    System.out.println();
+}
+
+private void recorrerInordenRecursivo(NodoArbol nodo) {
+    if (nodo != null) {
+        recorrerInordenRecursivo(nodo.hijoIzquierdo); // 1. Izquierda
+        System.out.print(nodo.getDato() + " ");        // 2. Raíz
+        recorrerInordenRecursivo(nodo.hijoDerecho);   // 3. Derecha
+    }
+
+}}
+
+
+
+
+//Clase NODOARBOL
+
+/**
+ *
+ * @author 1224100512kecc@gmail.com
+ * Kevin Eduardo Cuevas Castillo
+ * GTID141
+ * 1224100512
+ * Estructura de datos
+ * Unidad 3 Ejercicio Guiado
+ */
+public class NodoArbol {
+    private int dato;
+
+    public NodoArbol hijoIzquierdo;
+    public NodoArbol hijoDerecho;
+
+    public NodoArbol(int valor) {
+        this.dato = valor;
+        this.hijoIzquierdo = null;
+        this.hijoDerecho = null;
+    }
+
+    // Getter y setter
+    public int getDato() {
+        return dato;
+    }
+
+   
+    public void setDato(int nuevoDato) {
+        this.dato = nuevoDato;
+    }
+}
+
+
+//Main Para probar
+
+/**
+ *
+ * @author 1224100512.kecc@gmail.com
+ * Kevin Eduardo Cuevas Castillo
+ * Estructura de datos
+ * Unidad 3
+ */
+public class MainPrueba {
+    public static void main(String[] args) {
+      
+        ArbolBinario arbol = new ArbolBinario();
+
+        System.out.println("Insertando valores: 50, 30, 70, 20, 40");
+
+     
+        arbol.insertar(50); 
+        arbol.insertar(30); 
+        arbol.insertar(70); 
+        arbol.insertar(20);
+        arbol.insertar(40); 
+
+    
+        System.out.println("Recorrido esperado: 20 30 40 50 70");
+        arbol.recorrerInorden();
+    }
+}
+
+

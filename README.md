@@ -32,7 +32,7 @@
       <td>Ejercicio Árbol Binario (PDF)</td>
       <td>Documento PDF con explicación, dibujos y recorrido inorden del árbol binario.</td>
       <td>
-        <a href="https://github.com/KevinCuevas06/EJERCICIOS-GUIADOS-UNIDAD-III/blob/main/ArbolBinarioPractica.pdf" target="_blank">Ver PDF</a>
+        <a href="https://github.com/KevinCuevas06/EJERCICIOS-GUIADOS-UNIDAD-III/blob/main/FUNCIONAMIENTO%20DEL%20CODIGO%20Y%20ACTIVIDADES%20EN%20EL%20CUADERNO.pdf" target="_blank">Ver PDF</a>
       </td>
     </tr>
   </tbody>
